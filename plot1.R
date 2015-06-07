@@ -6,7 +6,7 @@ hpc <- read.table(file, header = TRUE, sep = ";")
 hpc$Date =  as.Date(hpc$Date, format = "%d/%m/%Y")
 hpc_time_select = hpc[hpc$Date == as.Date("2007-02-01") | hpc$Date == as.Date("2007-02-02"),]
 
-### transforminc the data in the column Global_active_power to numbers
+### transforming the data in the column Global_active_power to numbers
 Global_active_power = as.numeric(as.character(hpc_time_select$Global_active_power))
 
 ### creating and saving the histogram as png 
